@@ -1,0 +1,37 @@
+<div class="taille">
+  <h2>Taille</h2>
+  <p class="required">Obligatoire</p>
+  <mat-button-toggle-group name="size" aria-label="">
+    <mat-button-toggle value="1">Petite (5€)</mat-button-toggle>
+    <mat-button-toggle value="2">Moyenne (6€)</mat-button-toggle>
+    <mat-button-toggle value="3">Grande (8€)</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+
+<div class="base">
+  <h2>Base sauce</h2>
+  <p class="required">Obligatoire</p>
+  <mat-button-toggle-group name="base" aria-label="">
+    <mat-button-toggle value="1">Tomate (+ 1€)</mat-button-toggle>
+    <mat-button-toggle value="2">Crème (+ 1,50€)</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+
+<div class="ingredients">
+  <h2>Garniture</h2>
+  <button mat-stroked-button (click)="openDialog()" class="allergies">
+    Des allergies ?
+  </button>
+  <div class="ingredients-list">
+    <div
+      *ngFor="let item of ingredients"
+      class="ingredients-item"
+      (click)="toggle(item.name)"
+      [ngClass]="{ selected: isSelected(item.name) }"
+    >
+      <img [src]="item.image" alt="fromage" height="50px" width="50px" />
+      <span>{{ item.name }}</span>
+      <span class="price">+ {{ item.price }}</span>
+    </div>
+  </div>
+</div>

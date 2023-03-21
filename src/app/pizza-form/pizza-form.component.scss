@@ -1,0 +1,59 @@
+:host {
+  font-family: 'Roboto';
+}
+
+.taille,
+.base {
+  margin-bottom: 1em;
+}
+
+.ingredients {
+  margin-bottom: 110px;
+
+  .ingredients-list {
+    display: flex;
+    gap: 0.5em;
+    max-width: 500px;
+    flex-wrap: wrap;
+  }
+
+  .ingredients-item {
+    border: 2px solid rgba(0, 0, 0, 0.12);
+    border-radius: 0.5em;
+    padding: 0.5em 0;
+    width: 100px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .ingredients-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .ingredients-item.selected {
+    border: 2px solid rgba(0, 0, 0, 0.38);
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+
+  .price {
+    font-weight: 500;
+  }
+}
+
+.allergies {
+  margin-bottom: 1.5em;
+}
+
+.required {
+  margin-top: -1em;
+  color: gray;
+  font-size: 0.95em;
+}
