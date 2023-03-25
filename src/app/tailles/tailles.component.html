@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Sélectionner une taille</h1>
+<div mat-dialog-content>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Taille</mat-label>
+      <mat-select>
+        <mat-option value="Petite">Petite</mat-option>
+        <mat-option value="Moyenne">Moyenne</mat-option>
+        <mat-option value="Grande">Grande</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Annuler</button>
+  <button mat-button [mat-dialog-close]="'ok'" cdkFocusInitial>Valider</button>
+</div>

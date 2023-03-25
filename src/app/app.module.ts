@@ -11,11 +11,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { AllergenesComponent } from './allergenes/allergenes.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
 import { PrixPizzaComponent } from './prix-pizza/prix-pizza.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatListModule } from '@angular/material/list';
+import { TaillesComponent } from './tailles/tailles.component';
 
 @NgModule({
-  declarations: [AppComponent, PizzaFormComponent, AllergenesComponent, PrixPizzaComponent],
+  declarations: [AppComponent, PizzaFormComponent, AllergenesComponent, PrixPizzaComponent, TaillesComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -25,7 +27,8 @@ import { PrixPizzaComponent } from './prix-pizza/prix-pizza.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent],

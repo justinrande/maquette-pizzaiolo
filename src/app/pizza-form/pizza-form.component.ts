@@ -1,6 +1,7 @@
 import { AllergenesComponent } from './../allergenes/allergenes.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { TaillesComponent } from '../tailles/tailles.component';
 
 @Component({
   selector: 'app-pizza-form',
@@ -62,4 +63,9 @@ export class PizzaFormComponent implements OnInit {
   openDialog(): void {
     this.dialog.open(AllergenesComponent);
   }
+
+  openDialogTailles(): void {
+    this.dialog.open(TaillesComponent);
+  }
+
 }

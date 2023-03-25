@@ -1,27 +1,20 @@
-<div class="taille">
-  <h2>Taille</h2>
-  <p class="required">Obligatoire</p>
-  <mat-button-toggle-group name="size" aria-label="">
-    <mat-button-toggle value="1">Petite (5€)</mat-button-toggle>
-    <mat-button-toggle value="2">Moyenne (6€)</mat-button-toggle>
-    <mat-button-toggle value="3">Grande (8€)</mat-button-toggle>
-  </mat-button-toggle-group>
-</div>
+<div class="flex">
+  <div class="taille">
+    <h2>Taille</h2>
+    <button mat-stroked-button (click)="openDialogTailles()" class="allergies">
+      tailles
+    </button>
+  </div>
 
-<div class="base">
-  <h2>Base sauce</h2>
-  <p class="required">Obligatoire</p>
-  <mat-button-toggle-group name="base" aria-label="">
-    <mat-button-toggle value="1">Tomate (+ 1€)</mat-button-toggle>
-    <mat-button-toggle value="2">Crème (+ 1,50€)</mat-button-toggle>
-  </mat-button-toggle-group>
+  <div class="base">
+    <mat-button-toggle-group name="base" aria-label="">
+      <mat-button-toggle value="1">Tomate</mat-button-toggle>
+      <mat-button-toggle value="2">Crème</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
 </div>
 
 <div class="ingredients">
-  <h2>Garniture</h2>
-  <button mat-stroked-button (click)="openDialog()" class="allergies">
-    Des allergies ?
-  </button>
   <div class="ingredients-list">
     <div
       *ngFor="let item of ingredients"
@@ -29,9 +22,19 @@
       (click)="toggle(item.name)"
       [ngClass]="{ selected: isSelected(item.name) }"
     >
-      <img [src]="item.image" alt="fromage" height="50px" width="50px" />
       <span>{{ item.name }}</span>
-      <span class="price">+ {{ item.price }}</span>
     </div>
   </div>
 </div>
+
+<mat-label>Allergènes</mat-label>
+<mat-selection-list>
+  <mat-list-option>Arachides</mat-list-option>
+  <mat-list-option>Produits laitiers</mat-list-option>
+  <mat-list-option>Soja</mat-list-option>
+  <mat-list-option>Oeufs</mat-list-option>
+  <mat-list-option>Crustacés</mat-list-option>
+  <mat-list-option>Poissons</mat-list-option>
+  <mat-list-option>Fruits à coques</mat-list-option>
+  <mat-list-option>Céleri </mat-list-option>
+</mat-selection-list>
